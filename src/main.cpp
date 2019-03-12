@@ -1,33 +1,22 @@
 #include <iostream>
 #include <cstdlib>
+#include "functions.hpp"
 using namespace std;
 
-class Numbers{
-	public:
-		int firstNum;
-		int secondNum;
-		Numbers(string firstInput, string secondInput);
-		string operator+(int firstNum, int secondNum);
-};
-
-string operator+(int firstNum, int secondNum){
-		
-}
-
-Numbers::Numbers(string firstInput, string secondInput){
-	cout<<"Input first number: ";
-	cin>>firstInput;
-	cout<<"Input second number: ";
-	cin>>secondInput;
-	firstNum = strtol(&firstInput[0], NULL, 16);
-	secondNum = strtol(&secondInput[0], NULL, 16);
-}
-
-
 int main(){
-	string firstInput, secondInput;
+	srand(time(NULL));
+	Number firstNum, secondNum;
+	
 	char operation;
-	Numbers input(firstInput, secondInput);
-	cout<<"Choose operation (+, -, /, *): ";
-	cin>>operation;
+	cout <<"Choose operation(+,-,*,/): ";
+	cin >> operation;
+	int randomNum = rand();
+	int result = calculations(operation, firstNum, secondNum, randomNum);
+	cout<<"Do you want to know the result is true or false? (t/f)";
+	char trueOrFalse;
+	cin>>trueOrFalse;
+	if(trueOrFalse == 't')
+		show(randomNum,result);
+	else
+		show(result);
 }
