@@ -1,3 +1,6 @@
+/*Kacper Kostecki, 300236, projekt II
+prowadzący: Wiktor Kuśmirek
+*/
 #include <iostream>
 #include <cstdlib>
 #include "functions.hpp"
