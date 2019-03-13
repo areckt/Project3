@@ -15,10 +15,10 @@ int main(){
 	cin >> operation;
 	int randomNum = rand();
 	int result = calculations(operation, firstNum, secondNum, randomNum);
-	cout<<"Do you want to know the result is true or false? (t/f)";
-	char trueOrFalse;
-	cin>>trueOrFalse;
-	if(trueOrFalse == 't')
+	cout<<"Do you want to know the result is true or false? (y/n)";
+	char YesOrNo;
+	cin>>YesOrNo;
+	if(YesOrNo == 'y')
 		show(randomNum,result);
 	else
 		show(result);
