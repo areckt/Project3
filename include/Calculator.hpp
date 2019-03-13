@@ -4,17 +4,17 @@ prowadzący: Wiktor Kuśmirek
 #ifndef functions_hpp
 #define functions_hpp
 
+#include "Number.hpp"
+
 class Calculator{
 	private:
 		int randomNum;
-		int firstNum;
-		int secondNum;
 		int operation;
 		int result;
 	public:
-		Calculator(Number, Number);
-		int calculations(char, Number, Number, int);
-		void show(int, int);
+		Calculator(Number first, Number second);
+		int calculations(int, Number, Number, int);
+		void show(Calculator, int);
 		void show(int);
 };
 
