@@ -33,7 +33,12 @@ int calculations(char operation, Number firstNum, Number secondNum, int randomNu
 		else if(operation == '*')
 			return firstNum * secondNum;
 		else if(operation == '/')
-			return firstNum / secondNum;
+			if(secondNum.value != 0)
+				return firstNum / secondNum;
+			else{
+				cout<<"You can not use 0 as second number"<<endl;
+				exit(1);
+			}
 		else{
 			cout<<"Error: Invalid operation sign"<<endl;
 			exit(1);
