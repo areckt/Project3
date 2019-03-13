@@ -3,28 +3,19 @@ prowadzący: Wiktor Kuśmirek
 */
 #include <iostream>
 #include <cstdlib>
-#include "functions.hpp"
+#include "number.hpp"
 using namespace std;
 
-Number::Number(){
-	cout<<"Input number: ";
-	cin>> hex >>value;
+Calculator::Calculator(Number first, Number second){
+	cout <<"Choose operation(+,-,*,/): ";
+	cin >> operation;
+	firstNum = first.value;
+	secondNum = second.value;
+	randomNum = rand();
+	calculations(operation, first, second, randomNum);
 }
 
-int operator+(Number first, Number second){
-		return first.value+second.value;
-}
-int operator-(Number first, Number second){
-		return first.value-second.value;
-}
-int operator*(Number first, Number second){
-		return first.value*second.value;
-}
-int operator/(Number first, Number second){
-		return first.value/second.value;
-}
-
-int calculations(char operation, Number firstNum, Number secondNum, int randomNum){
+Calculator::int calculations(char operation, Number firstNum, Number secondNum, int randomNum){
 	if(randomNum%2 == 0)
 		if(operation == '+')
 			return firstNum + secondNum;
@@ -47,13 +38,13 @@ int calculations(char operation, Number firstNum, Number secondNum, int randomNu
 		return rand();
 	
 }	
-void show(int randomNum, int result){
+Calculator::void show(int randomNum, int result){
 	cout<<"Result is: "<< hex << result <<" ";
 	if(randomNum%2 == 0)
 		cout<<"and it is true"<<endl;
 	else
 		cout<<"and it is false"<<endl;
 }
-void show(int result){
+Calculator::void show(int result){
 	cout<<"Result is: "<< hex << result<<endl;
 }
