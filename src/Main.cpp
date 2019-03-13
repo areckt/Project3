@@ -5,6 +5,7 @@ prowadzący: Wiktor Kuśmirek
 #include <cstdlib>
 #include "Calculator.hpp"
 #include "Number.hpp"
+#include "Number.cpp"
 using namespace std;
 
 int main(){
@@ -12,10 +13,8 @@ int main(){
 	Number firstNum, secondNum;
 	Calculator calculate(firstNum, secondNum);
 
-	cout<<"Do you want to know the result is true or false? (y/n)";
-	char YesOrNo;
-	cin>>YesOrNo;
-	if(YesOrNo == 'y')
+	int result = calculate.calculations(firstNum, secondNum);
+	if(calculate.resultShow())
 		calculate.show(calculate,result);
 	else
 		calculate.show(result);

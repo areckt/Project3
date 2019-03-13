@@ -12,10 +12,9 @@ Calculator::Calculator(Number first, Number second){
 	cout <<"Choose operation(+,-,*,/): ";
 	cin >> operation;
 	randomNum = rand();
-	result = calculations(operation, first, second, randomNum);
 }
 
-int Calculator::calculations(int operation, Number firstNum, Number secondNum, int randomNum){
+int Calculator::calculations(Number firstNum, Number secondNum){
 	if(randomNum%2 == 0)
 		if(operation == '+')
 			return firstNum + secondNum;
@@ -24,12 +23,7 @@ int Calculator::calculations(int operation, Number firstNum, Number secondNum, i
 		else if(operation == '*')
 			return firstNum * secondNum;
 		else if(operation == '/')
-			if(secondNum.value != 0)
-				return firstNum / secondNum;
-			else{
-				cout<<"You can not use 0 as second number"<<endl;
-				exit(1);
-			}
+			return firstNum / secondNum;
 		else{
 			cout<<"Error: Invalid operation sign"<<endl;
 			exit(1);
@@ -38,6 +32,16 @@ int Calculator::calculations(int operation, Number firstNum, Number secondNum, i
 		return rand();
 	
 }	
+
+bool Calculator::resultShow(){
+	cout<<"Do you want to know the result is true or false? (y/n)";
+	char YesOrNo;
+	cin>>YesOrNo;
+	if(YesOrNo == 'y')
+		return true;
+	return false;
+}
+
 void Calculator::show(Calculator calculate, int result){
 	cout<<"Result is: "<< hex << result <<" ";
 	if(calculate.randomNum%2 == 0)
