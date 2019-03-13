@@ -10,11 +10,8 @@ class Number{
 		Number();
 };
 int operator+(Number first, Number second);
-	
 int operator-(Number first, Number second);
-	
 int operator*(Number first, Number second);
-	
 int operator/(Number first, Number second);
 	
 int calculations(char operation, Number firstNum, Number secondNum, int randomNum);
