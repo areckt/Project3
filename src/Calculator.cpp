@@ -3,14 +3,8 @@ prowadzący: Wiktor Kuśmirek
 */
 #include <iostream>
 #include <cstdlib>
-#include "Number.cpp"
 #include "Number.hpp"
-/*Kacper Kostecki, 300236, projekt II
-prowadzący: Wiktor Kuśmirek
-*/
-#include <iostream>
 #include "Calculator.hpp"
-#include "Number.hpp"
 using namespace std;
 
 Calculator::Calculator(Number first, Number second){
@@ -31,7 +25,7 @@ int Calculator::calculations(Number firstNum, Number secondNum){
 			return firstNum / secondNum;
 		else{
 			cout<<"Error: Invalid operation sign"<<endl;
-			exit(1);
+			terminate();
 		}
 	else
 		return rand();
