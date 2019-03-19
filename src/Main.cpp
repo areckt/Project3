@@ -5,7 +5,6 @@ prowadzący: Wiktor Kuśmirek
 #include <cstdlib>
 #include "Calculator.hpp"
 #include "Number.hpp"
-#include "Number.cpp"
 using namespace std;
 
 int main(){

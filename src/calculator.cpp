@@ -5,7 +5,12 @@ prowadzący: Wiktor Kuśmirek
 #include <cstdlib>
 #include "Number.cpp"
 #include "Number.hpp"
+/*Kacper Kostecki, 300236, projekt II
+prowadzący: Wiktor Kuśmirek
+*/
+#include <iostream>
 #include "Calculator.hpp"
+#include "Number.hpp"
 using namespace std;
 
 Calculator::Calculator(Number first, Number second){

@@ -1,9 +1,8 @@
 /*Kacper Kostecki, 300236, projekt II
 prowadzący: Wiktor Kuśmirek
 */
-#ifndef functions_hpp
-#define functions_hpp
-
+#ifndef Calculator_HPP
+#define Calculator_HPP
 #include "Number.hpp"
 
 class Calculator{
