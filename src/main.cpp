@@ -7,10 +7,10 @@ using namespace std;
 
 int main(){
 	int menu;
-	vector < Section<int> > sections;
+	vector<Section<int> > sections;
 	do{
 		cout<<"1.Create new section."<<endl;
-		cout<<"2.See exsiting section."<<endl;
+		cout<<"2.See exisiting section."<<endl;
 		cout<<"3.Exit."<<endl;
 		cout<<"What do you want to do: ";
 		cin>>menu;
@@ -27,11 +27,11 @@ int main(){
 			cout<<"Which section do you want to see?"<<endl;
 			for(unsigned int i = 0; i < sections.size(); ++i){
 				cout<<i+1<<". ";
-				sections[i].show();
+				sections[i].showName();
 			}
 			int choose;
 			cin>>choose;
-			sections[choose-1].show(choose);
+			sections[choose-1].show();
 		}
 		else if(menu != 3)
 			cout<<"!!!Wrong number, pick again!!!"<<endl;

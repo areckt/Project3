@@ -22,10 +22,10 @@ void Player::setData(){
 }
 
 ostream & operator<< (ostream &output, const Player &player){
-	output<<"	Name: "<< player.name <<endl;
-	output<<"	Surname: "<< player.surname <<endl;
-	output<<"	Age: "<<player.age<<endl;
-	output<<"	Former club: "<<player.formerClub<<endl;
-	output<<"	Years of activity: "<<player.activityYears<<endl;
+	output<<"\tName: "<< player.name <<endl;
+	output<<"\tSurname: "<< player.surname <<endl;
+	output<<"\tAge: "<<player.age<<endl;
+	output<<"\tFormer club: "<<player.formerClub<<endl;
+	output<<"\tYears of activity: "<<player.activityYears<<endl;
 	return output;
 }

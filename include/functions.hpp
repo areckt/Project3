@@ -4,7 +4,7 @@ prowadzący: Wiktor Kuśmirek
 #ifndef functions_HPP
 #define functions_HPP
 
-void inputSecurity(std::string);
+void inputSecurity(std::string&);
 int inputSecurity();
 
 #endif

@@ -19,8 +19,8 @@ class Section{
 	public:
 		void setData();
 		T inputSecurity();
-		void show(void);
-		void show(int);
+		void showName();
+		void show();
 };
 
 template<typename T>
@@ -44,10 +44,6 @@ void Section<T>::setData(){
 		else if(menu != 2)
 			std::cout<<"!!!Wrong number, pick again!!!"<<std::endl;
 	}while(menu != 2);
-}
-template<typename T>
-void Section<T>::show(){
-	std::cout<<discipline<<std::endl;
 }
 
 template <typename T>
@@ -73,7 +69,12 @@ T Section<T>::inputSecurity(){
 }
 
 template<typename T>
-void Section<T>::show(int number){
+void Section<T>::showName(){
+	std::cout<<discipline<<std::endl;
+}
+
+template<typename T>
+void Section<T>::show(){
 	std::cout<<"Discipline: "<<discipline<<std::endl;
 	std::cout<<"Current revenues: "<<revenues<<std::endl;
 	std::cout<<trainer;

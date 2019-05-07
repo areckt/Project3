@@ -18,8 +18,8 @@ void Trainer::setData(){
 
 ostream & operator<< (ostream &output, const Trainer &t){
 	output<<"Trainer: "<<endl;
-	output<<"	Name: "<< t.name <<endl;
-	output<<"	Surname: "<< t.surname <<endl;
-	output<<"	Age: "<<t.age<<endl;
+	output<<"\tName: "<< t.name <<endl;
+	output<<"\tSurname: "<< t.surname <<endl;
+	output<<"\tAge: "<<t.age<<endl;
 	return output;
 }

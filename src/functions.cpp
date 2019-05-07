@@ -5,7 +5,7 @@ prowadzący: Wiktor Kuśmirek
 #include <sstream>
 using namespace std;
 
-void inputSecurity(string input){
+void inputSecurity(string& input){
 	bool temporary;
 	do{
 		temporary = true;
