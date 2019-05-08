@@ -29,18 +29,9 @@ int main(){
 				cout<<i+1<<". ";
 				sections[i].showName();
 			}
-			bool temporary;
-			do{
-				unsigned int choose;
-				cin>>choose;
-				temporary = true;
-				if(choose > sections.size()){
-					temporary = false;
-					cout<<"Section with that number doesn't exist."<<endl;
-				}
-				sections[choose-1].show();
-			}while(!temporary);
-			
+			int choose;
+			cin>>choose;
+			sections[choose-1].show();
 		}
 		else if(menu != 3)
 			cout<<"!!!Wrong number, pick again!!!"<<endl;
