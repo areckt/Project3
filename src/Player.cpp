@@ -21,11 +21,11 @@ void Player::setData(){
 	activityYears = inputSecurity();
 }
 
-ostream & operator<< (ostream &output, const Player &player){
-	output<<"\tName: "<< player.name <<endl;
-	output<<"\tSurname: "<< player.surname <<endl;
-	output<<"\tAge: "<<player.age<<endl;
-	output<<"\tFormer club: "<<player.formerClub<<endl;
-	output<<"\tYears of activity: "<<player.activityYears<<endl;
+ostream & operator<< (ostream &output, const Player &p){
+	output<<"\tName: "<< p.name <<endl;
+	output<<"\tSurname: "<< p.surname <<endl;
+	output<<"\tAge: "<<p.age<<endl;
+	output<<"\tFormer club: "<<p.formerClub<<endl;
+	output<<"\tYears of activity: "<<p.activityYears<<endl;
 	return output;
 }

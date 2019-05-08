@@ -13,7 +13,7 @@ class Player{
 		int activityYears;
 	public:
 		void setData();
-		friend std::ostream & operator<< (std::ostream &output, const Player &player);
+		friend std::ostream & operator<< (std::ostream &output, const Player &p);
 		
 };
 

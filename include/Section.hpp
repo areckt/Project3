@@ -16,9 +16,9 @@ class Section{
 		std::string discipline;
 		Trainer trainer;
 		std::vector<Player> players;
+		T inputSecurity();
 	public:
 		void setData();
-		T inputSecurity();
 		void showName();
 		void show();
 };
